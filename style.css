@@ -1,0 +1,574 @@
+:root {
+  --primary-color: #fff;
+  --secondary-color: #000;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+}
+
+nav .hamburger {
+  display: grid;
+  gap: 0.2rem;
+  cursor: pointer;
+}
+
+nav .hamburger span {
+  width: 1.5rem;
+  height: 0.2rem;
+  /* padding: 0; */
+  background-color: var(--secondary-color);
+}
+
+nav .close-menu {
+  height: 2rem;
+  display: flex;
+  cursor: pointer;
+  /* display: none; */
+}
+
+nav .close-menu > p {
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 2rem 1rem 3rem auto;
+  float: right;
+}
+
+nav .navigation {
+  width: 85%;
+  background-color: blue;
+  color: white;
+  display: grid;
+  grid-template-rows: 20% 80%;
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+nav .navigation > div:last-of-type > p {
+  font-size: 1.5rem;
+  margin: 0 1rem 1rem 1rem;
+  color: var(--primary-color);
+}
+
+nav .navigation > div:last-of-type > p a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* Main Section */
+main {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3rem 1rem 0 1rem;
+}
+
+main > div:first-of-type {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+main > div:first-of-type > h1 {
+  font-size: 2.5rem;
+}
+
+main > div:first-of-type > p {
+  font-size: 1.2rem;
+  color: gray;
+}
+
+main div {
+  width: 100%;
+}
+
+main img {
+  width: 100%;
+  height: auto;
+}
+
+/* Item section */
+section.items {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  background-color: blue;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex: 20%;
+  margin-top: -0.5rem;
+  /* flex-grow: 0; */
+  /* flex-shrink: unset; */
+}
+
+section.items img {
+  width: 100%;
+  /* heigth:  */
+  height: auto;
+}
+
+section.items > div {
+  height: 100%;
+  text-align: center;
+  /* background-color: green; */
+  display: grid;
+  place-items: center;
+  padding: auto 0;
+  /* width: 100%; */
+}
+
+section.items > div:first-of-type {
+  display: none;
+  background-color: red;
+}
+
+section.items > .item-card {
+  padding: 2rem 1rem;
+}
+
+section.items > .item-card > div:first-of-type {
+  /* color: var(--primary-color); */
+  margin-bottom: 2rem;
+}
+
+section.items > .item-card > div {
+  color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+section.items > .item-card > div h3 {
+  font-weight: 600;
+}
+
+section.items > .item-card > div p {
+  font-weight: 200;
+}
+
+/* President Description */
+section.president {
+  width: 90%;
+  max-width: 1170px;
+  margin: auto;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  flex: 50%;
+  gap: 1rem;
+  padding: 3rem 0;
+}
+
+section.president img {
+  width: 100%;
+  /* aspect-ratio: 2/4; */
+}
+
+section.president > div:first-of-type {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+section.president > .president-desc {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem 0 0 0;
+}
+
+section.president .president-desc h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+section.president .president-desc p {
+  color: gray;
+  font-weight: 300;
+}
+
+section.president .president-desc > div:last-of-type {
+  padding-left: 2rem;
+  border-left: 2px solid gray;
+}
+
+section.president .president-desc h2 {
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+section.president .president-desc h2 + p {
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+section.president > .president-desc button {
+  background-color: blue;
+  color: var(--primary-color);
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+}
+
+/* Join us Section */
+section.join-us {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 1rem;
+}
+
+section.join-us > div {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+section.join-us > div > h1 {
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+section.join-us > div > p {
+  color: gray;
+  line-height: 1.2;
+}
+
+section.join-us > form {
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+section.join-us > form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+section.join-us > form > div input {
+  padding: 1rem;
+}
+
+section.join-us > form > div input::placeholder {
+  color: gray;
+}
+
+section.join-us > form > button {
+  width: fit-content;
+  margin: auto;
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+}
+
+section.join-us > form > button:hover {
+  background-color: red;
+}
+
+/* Our Movement Section */
+section.our-movement {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+section.our-movement img {
+  width: 100%;
+}
+
+section.our-movement > div:first-of-type {
+  padding: 0 1rem;
+}
+
+section.our-movement > .movement-desc {
+  background-color: blue;
+  color: white;
+  padding: 2rem 1rem;
+}
+
+section.our-movement > .movement-desc > div:first-of-type {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+section.our-movement > .movement-desc > div:first-of-type > h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+section.our-movement > .movement-desc > div:first-of-type > p {
+  line-height: 1.5;
+}
+
+section.our-movement > .movement-desc > .movement-features {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+section.our-movement > .movement-desc > .movement-features > div {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+section.our-movement > .movement-desc > .movement-features > div > img {
+  width: 3rem;
+  margin-bottom: -0.5rem;
+}
+
+section.our-movement > .movement-desc > .movement-features > div > p {
+  width: 80%;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 480px) {
+  section.our-movement > .movement-desc {
+    background-color: blue;
+    color: white;
+    padding: 2rem 1rem;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  /* Main Section */
+  main {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  main > div:first-of-type {
+    /* gap: 0.5rem; */
+    /* background-color: red; */
+    max-height: 250px;
+  }
+
+  main > div:first-of-type h1 {
+    /* width: 80%; */
+    font-size: 2.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  main > div:first-of-type p {
+    /* width: 60%; */
+    font-size: 1rem;
+    margin-bottom: 0rem;
+  }
+
+  /* main > div:last-of-type {
+    width: 40%;
+    background-color: red; 
+  } */
+
+  main > div:last-of-type > img {
+    margin-bottom: -0rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  nav {
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav .hamburger {
+    display: none;
+  }
+
+  nav .close-menu {
+    display: none;
+  }
+
+  nav .navigation {
+    background-color: var(--primary-color);
+    position: static;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+  }
+
+  nav .navigation > div:last-of-type {
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav .navigation > div:last-of-type > p {
+    font-size: 1.5rem;
+    margin: 0 0rem 0rem 0rem;
+    color: var(--primary-color);
+  }
+
+  nav .navigation > div:last-of-type > p a {
+    text-decoration: none;
+    color: var(--secondary-color);
+  }
+
+  nav .navigation a:hover {
+    color: blue;
+  }
+
+  /* Main Section */
+  main {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  main > div:first-of-type {
+    /* gap: 0.5rem; */
+    /* background-color: red; */
+    max-height: 290px;
+  }
+
+  main > div:first-of-type h1 {
+    width: 80%;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  main > div:first-of-type p {
+    width: 60%;
+    font-size: 1.3rem;
+    margin-bottom: 0rem;
+  }
+
+  main > div:last-of-type {
+    width: 40%;
+    /* background-color: red; */
+  }
+
+  main > div:last-of-type > img {
+    margin-bottom: -0.35rem;
+  }
+
+  /* Items section */
+  section.items {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    background-color: blue;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex: 20%;
+    /* flex-grow: 0; */
+    /* flex-shrink: unset; */
+  }
+
+  section.items > div:first-of-type {
+    display: block;
+    background-color: red;
+  }
+
+  section.items > div:first-of-type > img {
+    margin-bottom: -0.2rem;
+  }
+
+  section.president {
+    width: 60%;
+    max-width: 1170px;
+    margin: auto;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    flex: 50%;
+    gap: 4rem;
+    padding: 6.25rem 0;
+  }
+
+  section.president img {
+    width: 100%;
+    aspect-ratio: 3/4;
+  }
+
+  section.president > div:first-of-type {
+    width: 50%;
+  }
+
+  section.president > .president-desc {
+    width: 50%;
+    flex-direction: column;
+  }
+
+  section.president .president-desc h1 {
+    margin-bottom: 3rem;
+  }
+
+  /* Join-Us section */
+  section.join-us {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 1rem;
+  }
+
+  section.join-us > form > div {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  section.join-us > form {
+    justify-content: center;
+    flex-direction: row;
+    /* gap: 0; */
+  }
+
+  section.join-us > form > div {
+    padding: 0;
+  }
+
+  section.join-us > form > button {
+    margin: auto 0;
+  }
+}
