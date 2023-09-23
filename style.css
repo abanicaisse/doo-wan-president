@@ -7,6 +7,8 @@ html {
 :root {
   --primary-color: #fff;
   --secondary-color: #000;
+  --primary-bg: #1d3465;
+  --accent-red: #e70f47;
 }
 
 *,
@@ -22,7 +24,7 @@ body {
 }
 
 button:hover {
-  background-color: red;
+  background-color: var(--accent-red);
   transition: background-color 0.5s ease-out;
 }
 
@@ -30,14 +32,14 @@ nav {
   width: 100%;
   max-width: 1400px;
   margin: auto;
+  background-color: var(--primary-bg);
   display: flex;
   justify-content: space-between;
-  padding: 1rem 1rem;
-  background-color: #1d3465;
+  padding: 2rem 1rem;
+}
+
+nav h2 {
   color: var(--primary-color);
-  position: fixed;
-  top: 0;
-  align-items: center;
 }
 
 nav .hamburger {
@@ -71,7 +73,7 @@ nav .close-menu > p {
 
 nav .navigation {
   width: 85%;
-  background-color: #1d3465;
+  background-color: var(--primary-bg);
   color: white;
   display: grid;
   grid-template-rows: 20% 80%;
@@ -95,7 +97,7 @@ nav .navigation > div:last-of-type > p a {
 }
 
 nav .navigation > div:last-of-type > p a:hover {
-  color: red;
+  color: var(--accent-red);
 }
 
 /* Main Section */
@@ -139,7 +141,7 @@ section.items {
   width: 100%;
   max-width: 1400px;
   margin: auto;
-  background-color: #1d3465;
+  background-color: var(--primary-bg);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -169,16 +171,29 @@ section.items > div {
 
 section.items > div:first-of-type {
   display: none;
-  background-color: red;
+  background-color: var(--accent-red);
 }
 
 section.items > .item-card {
+  width: 100%;
   padding: 1rem 1rem;
 }
 
+section.items > .item-card p {
+  line-height: 2;
+}
+
 section.items > .item-card > div:first-of-type {
-  /* color: var(--primary-color); */
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
   margin-bottom: 1rem;
+}
+
+section.items > .item-card > div:first-of-type img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
 }
 
 section.items > .item-card > div {
@@ -193,6 +208,7 @@ section.items > .item-card > div h3 {
 }
 
 section.items > .item-card > div p {
+  max-width: 500px;
   font-weight: 200;
 }
 
@@ -201,7 +217,7 @@ section.president {
   width: 90%;
   max-width: 1170px;
   margin: auto;
-  /* background-color: red; */
+  /* background-color: var(--accent-red); */
   display: flex;
   flex-direction: column;
   flex: 50%;
@@ -257,7 +273,7 @@ section.president .president-desc h2 + p {
 }
 
 section.president > .president-desc button {
-  background-color: #1d3465;
+  background-color: var(--primary-bg);
   color: var(--primary-color);
   border: none;
   border-radius: 0.2rem;
@@ -317,14 +333,14 @@ section.join-us > form > div input::placeholder {
 section.join-us > form > button {
   width: fit-content;
   margin: auto;
-  background-color: #1d3465;
+  background-color: var(--primary-bg);
   color: white;
   border: none;
   padding: 1rem 2rem;
 }
 
 section.join-us > form > button:hover {
-  background-color: red;
+  background-color: var(--accent-red);
 }
 
 /* Our Movement Section */
@@ -351,8 +367,13 @@ section.our-movement > div:first-of-type {
   padding: 0 1rem;
 }
 
+section.our-movement > div:first-of-type > img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+}
+
 section.our-movement > .movement-desc {
-  background-color: #1d3465;
+  background-color: var(--primary-bg);
   color: white;
   padding: 2rem 1rem;
 }
@@ -376,8 +397,8 @@ section.our-movement > .movement-desc > .movement-features {
   display: grid;
   /* flex-direction: column; */
   grid-template-columns: 1fr;
-  gap: 1rem;
-  margin-top: 2rem;
+  gap: 2rem;
+  margin-top: 0rem;
 }
 
 section.our-movement > .movement-desc > .movement-features > div {
@@ -388,12 +409,68 @@ section.our-movement > .movement-desc > .movement-features > div {
 
 section.our-movement > .movement-desc > .movement-features > div > img {
   width: 3rem;
+  height: 3rem;
   margin-bottom: -0.5rem;
+  border-radius: 50%;
 }
 
 section.our-movement > .movement-desc > .movement-features > div > p {
   width: 80%;
   line-height: 1.5;
+}
+
+/* Gallery Section */
+section.gallery {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+}
+
+section.gallery h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+section.gallery img {
+  width: 100%;
+}
+
+section.gallery > div {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+section.gallery > div > .video {
+  width: 100%;
+  /* background-color: var(--accent-red); */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  row-gap: 0.5rem;
+  column-gap: 2rem;
+}
+
+section.gallery > div > d.video video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+section.gallery > div > .img {
+  width: 100%;
+  /* max-width: 1400px; */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  column-gap: 1rem;
+  row-gap: 0.5rem;
+}
+
+section.gallery > div > .img img {
+  aspect-ratio: 3 / 4;
 }
 
 /* Accordions section */
@@ -471,7 +548,7 @@ footer {
   width: 100%;
   max-width: 1400px;
   margin: auto;
-  background-color: blue;
+  background-color: var(--primary-bg);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   justify-content: center;
@@ -492,6 +569,7 @@ footer h2 {
 }
 
 footer h3 {
+  cursor: pointer;
   font-size: 1rem;
   margin-bottom: 0.75rem;
 }
@@ -504,6 +582,7 @@ footer a + h3 {
 
 footer p,
 footer a {
+  cursor: pointer;
   text-decoration: none;
   display: block;
   color: lightgray;
@@ -512,7 +591,7 @@ footer a {
 }
 
 footer a:hover {
-  color: red;
+  color: var(--accent-red);
 }
 
 @media screen and (min-width: 480px) {
@@ -530,7 +609,7 @@ footer a:hover {
 
   main > div:first-of-type {
     /* gap: 0.5rem; */
-    /* background-color: red; */
+    /* background-color: var(--accent-red); */
     max-height: 250px;
   }
 
@@ -548,7 +627,7 @@ footer a:hover {
 
   /* main > div:last-of-type {
     width: 40%;
-    background-color: red; 
+    background-color: var(--accent-red); 
   } */
 
   main > div:last-of-type > img {
@@ -562,9 +641,9 @@ footer a:hover {
 
 @media screen and (min-width: 800px) {
   nav {
-    /* background-color: red; */
+    background-color: var(--primary-bg);
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
   }
   nav .hamburger {
@@ -576,7 +655,9 @@ footer a:hover {
   }
 
   nav .navigation {
-    background-color: var(--primary-color);
+    background-color: var(--primary-bg);
+    height: fit-content;
+    /* background-color: cyan; */
     position: static;
     display: flex;
     justify-content: right;
@@ -587,8 +668,11 @@ footer a:hover {
   }
 
   nav .navigation > div:last-of-type {
+    /* background-color: red; */
+    margin-top: auto;
     display: flex;
     gap: 2rem;
+    margin-bottom: -1.5rem;
   }
 
   nav .navigation > div:last-of-type > p {
@@ -599,7 +683,7 @@ footer a:hover {
 
   nav .navigation > div:last-of-type > p a {
     text-decoration: none;
-    color: var(--secondary-color);
+    color: var(--primary-color);
   }
 
   nav .navigation a:hover {
@@ -614,7 +698,7 @@ footer a:hover {
 
   main > div:first-of-type {
     /* gap: 0.5rem; */
-    /* background-color: red; */
+    /* background-color: var(--accent-red); */
     max-height: 290px;
   }
 
@@ -632,19 +716,37 @@ footer a:hover {
 
   main > div:last-of-type {
     width: 40%;
-    /* background-color: red; */
+    /* background-color: var(--accent-red); */
   }
 
   main > div:last-of-type > img {
     margin-bottom: -0.35rem;
   }
+}
 
+@media screen and (min-width: 1000px) {
+  section.join-us > form {
+    justify-content: center;
+    flex-direction: row;
+    /* gap: 0; */
+  }
+
+  section.join-us > form > div {
+    padding: 0;
+  }
+
+  section.join-us > form > button {
+    margin: auto 0;
+  }
+}
+
+@media screen and (min-width: 1120px) {
   /* Items section */
   section.items {
     width: 100%;
     max-width: 1400px;
     margin: auto;
-    background-color: #1d3465;
+    background-color: var(--primary-bg);
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -657,7 +759,7 @@ footer a:hover {
 
   section.items > div:first-of-type {
     display: block;
-    background-color: red;
+    background-color: var(--accent-red);
   }
 
   section.items > div:first-of-type > img {
@@ -668,7 +770,7 @@ footer a:hover {
     width: 60%;
     max-width: 1170px;
     margin: auto;
-    /* background-color: red; */
+    /* background-color: var(--accent-red); */
     display: flex;
     flex-direction: row;
     flex: 50%;
@@ -688,6 +790,7 @@ footer a:hover {
   section.president > .president-desc {
     width: 50%;
     flex-direction: column;
+    padding: 0;
   }
 
   section.president .president-desc h1 {
@@ -711,26 +814,10 @@ footer a:hover {
   }
 }
 
-@media screen and (min-width: 1000px) {
-  section.join-us > form {
-    justify-content: center;
-    flex-direction: row;
-    /* gap: 0; */
-  }
-
-  section.join-us > form > div {
-    padding: 0;
-  }
-
-  section.join-us > form > button {
-    margin: auto 0;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   /* Our Movement Section */
   section.our-movement {
-    background-color: blue;
+    background-color: var(--primary-bg);
     width: 100%;
     max-width: 1400px;
     margin: auto;
@@ -738,6 +825,7 @@ footer a:hover {
     flex-direction: row-reverse;
     align-items: center;
     gap: 0rem;
+    margin-top: 3rem;
     padding: 0rem 0;
   }
 
@@ -756,13 +844,13 @@ footer a:hover {
 
   section.our-movement > .movement-desc {
     height: 100%;
-    background-color: blue;
+    background-color: var(--primary-bg);
     color: white;
     padding: 2rem 1rem;
   }
 
   section.our-movement > .movement-desc > div:first-of-type {
     text-align: center;
-    margin-bottom: 0rem;
+    margin-bottom: 1.5rem;
   }
 }
