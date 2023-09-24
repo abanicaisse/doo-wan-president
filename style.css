@@ -17,7 +17,12 @@ nav {
   margin: auto;
   display: flex;
   justify-content: space-between;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
+  background-color: #1d3465;
+  color: var(--primary-color);
+  position: fixed;
+  top: 0;
+  align-items: center;
 }
 
 nav .hamburger {
@@ -30,7 +35,7 @@ nav .hamburger span {
   width: 1.5rem;
   height: 0.2rem;
   /* padding: 0; */
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
 }
 
 nav .close-menu {
@@ -51,7 +56,7 @@ nav .close-menu > p {
 
 nav .navigation {
   width: 85%;
-  background-color: blue;
+  background-color: #1d3465;
   color: white;
   display: grid;
   grid-template-rows: 20% 80%;
@@ -82,6 +87,7 @@ main {
   flex-direction: column;
   gap: 2rem;
   padding: 3rem 1rem 0 1rem;
+  margin-top: 40px;
 }
 
 main > div:first-of-type {
@@ -113,14 +119,14 @@ section.items {
   width: 100%;
   max-width: 1400px;
   margin: auto;
-  background-color: blue;
+  background-color: #1d3465;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   flex: 20%;
-  margin-top: -0.5rem;
+  margin-top: -0.3rem;
   /* flex-grow: 0; */
   /* flex-shrink: unset; */
 }
@@ -147,12 +153,12 @@ section.items > div:first-of-type {
 }
 
 section.items > .item-card {
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
 }
 
 section.items > .item-card > div:first-of-type {
   /* color: var(--primary-color); */
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 section.items > .item-card > div {
@@ -231,7 +237,7 @@ section.president .president-desc h2 + p {
 }
 
 section.president > .president-desc button {
-  background-color: blue;
+  background-color: #1d3465;
   color: var(--primary-color);
   border: none;
   border-radius: 0.2rem;
@@ -291,7 +297,7 @@ section.join-us > form > div input::placeholder {
 section.join-us > form > button {
   width: fit-content;
   margin: auto;
-  background-color: blue;
+  background-color: #1d3465;
   color: white;
   border: none;
   padding: 1rem 2rem;
@@ -313,7 +319,7 @@ section.our-movement {
 }
 
 section.our-movement img {
-  width: 100%;
+  width: 50%;
 }
 
 section.our-movement > div:first-of-type {
@@ -321,7 +327,7 @@ section.our-movement > div:first-of-type {
 }
 
 section.our-movement > .movement-desc {
-  background-color: blue;
+  background-color: #1d3465;
   color: white;
   padding: 2rem 1rem;
 }
@@ -362,6 +368,7 @@ section.our-movement > .movement-desc > .movement-features > div > p {
   width: 80%;
   line-height: 1.5;
 }
+
 
 @media screen and (min-width: 480px) {
   section.our-movement > .movement-desc {
@@ -490,7 +497,7 @@ section.our-movement > .movement-desc > .movement-features > div > p {
     width: 100%;
     max-width: 1400px;
     margin: auto;
-    background-color: blue;
+    background-color: #1d3465;
     width: 100%;
     display: flex;
     flex-direction: row;
