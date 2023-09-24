@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --primary-color: #fff;
   --secondary-color: #000;
@@ -9,6 +15,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+}
+
+button:hover {
+  background-color: red;
+  transition: background-color 0.5s ease-out;
 }
 
 nav {
@@ -76,6 +91,11 @@ nav .navigation > div:last-of-type > p {
 nav .navigation > div:last-of-type > p a {
   color: var(--primary-color);
   text-decoration: none;
+  transition: color 0.2s ease-out;
+}
+
+nav .navigation > div:last-of-type > p a:hover {
+  color: red;
 }
 
 /* Main Section */
@@ -318,11 +338,16 @@ section.our-movement {
   padding: 1rem 0;
 }
 
-section.our-movement img {
+/* section.our-movement img {
   width: 50%;
-}
+  width: 100%;
+  margin: auto;
+} */
 
 section.our-movement > div:first-of-type {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
   padding: 0 1rem;
 }
 
@@ -348,9 +373,11 @@ section.our-movement > .movement-desc > div:first-of-type > p {
 }
 
 section.our-movement > .movement-desc > .movement-features {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  display: grid;
+  /* flex-direction: column; */
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 section.our-movement > .movement-desc > .movement-features > div {
@@ -369,12 +396,128 @@ section.our-movement > .movement-desc > .movement-features > div > p {
   line-height: 1.5;
 }
 
+/* Accordions section */
+section.faq {
+  width: 100%;
+  max-width: 650px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+section.faq > h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+section.faq > div {
+  border: 1px solid lightgray;
+}
+
+section.faq > div .accordion {
+  width: 100%;
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  /* margin-bottom: 0.5rem; */
+  padding: 18px;
+}
+
+section.faq > div .accordion > div:first-of-type > p {
+  width: 0.75rem;
+  height: 2px;
+  background-color: black;
+  transition: transform 0.5s ease-in-out;
+}
+
+section.faq > div .accordion > div:first-of-type > p:last-of-type {
+  margin-top: -0.1rem;
+  transform: rotate(90deg);
+}
+
+section.faq > div .accordion.active,
+.accordion:hover {
+  background-color: #ccc;
+}
+
+section.faq > div .accordion.active > div:first-of-type > p:last-of-type {
+  margin-top: -0.1rem;
+  transform: rotate(180deg);
+}
+
+section.faq > div .panel {
+  background-color: white;
+  line-height: 1.5;
+  display: none;
+  overflow: hidden;
+  padding: 0 18px;
+  margin-top: 0.5rem;
+  /* border: 1px solid lightgray; */
+}
+
+/* footer Section */
+footer {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  background-color: blue;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  justify-content: center;
+  row-gap: 2rem;
+  margin-top: 1rem;
+  padding: 2rem 1rem 0 1rem;
+}
+
+footer h2,
+footer h3 {
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+footer h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+footer h3 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+footer p + h3,
+footer a + h3 {
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+footer p,
+footer a {
+  text-decoration: none;
+  display: block;
+  color: lightgray;
+  margin-bottom: 0.5rem;
+  transition: color 0.2s ease-out;
+}
+
+footer a:hover {
+  color: red;
+}
 
 @media screen and (min-width: 480px) {
-  section.our-movement > .movement-desc {
-    background-color: blue;
-    color: white;
-    padding: 2rem 1rem;
+  section.our-movement > .movement-desc > .movement-features {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -410,6 +553,10 @@ section.our-movement > .movement-desc > .movement-features > div > p {
 
   main > div:last-of-type > img {
     margin-bottom: -0rem;
+  }
+
+  section.our-movement > .movement-desc > .movement-features {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -577,5 +724,45 @@ section.our-movement > .movement-desc > .movement-features > div > p {
 
   section.join-us > form > button {
     margin: auto 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /* Our Movement Section */
+  section.our-movement {
+    background-color: blue;
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 0rem;
+    padding: 0rem 0;
+  }
+
+  section.our-movement img {
+    width: 100%;
+    margin: auto;
+  }
+
+  section.our-movement > div:first-of-type {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 0 0rem;
+    margin-bottom: -0.3rem;
+  }
+
+  section.our-movement > .movement-desc {
+    height: 100%;
+    background-color: blue;
+    color: white;
+    padding: 2rem 1rem;
+  }
+
+  section.our-movement > .movement-desc > div:first-of-type {
+    text-align: center;
+    margin-bottom: 0rem;
   }
 }
