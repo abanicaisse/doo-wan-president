@@ -340,6 +340,7 @@ section.join-us > form > button {
   margin: auto;
   background-color: var(--primary-bg);
   color: white;
+  cursor: pointer;
   border: none;
   padding: 1rem 2rem;
 }
